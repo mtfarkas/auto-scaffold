@@ -82,7 +82,7 @@ export class AppComponent implements OnInit, OnDestroy {
   onCopyToClipboard() {
     const result = this.clipboard.copy(this.generatedCommand);
 
-    if (!result) {
+    if (result) {
       this.toastr.success('Command successfully copied!');
     } else {
       this.toastr.error('Copying failed!');
